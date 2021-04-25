@@ -1,0 +1,169 @@
+##################### Php artisan make: auth ###################
+
+################# serving on another port ################
+php artisan serve --port=3001
+
+
+3. php artisan config:clear
+
+#################### Creating Category Migration #############
+php artisan make:migration create_category_table
+
+################## Creating Category Controller ########
+php artisan make:controller CategoryController
+
+################Creating Model ##############
+php artisan make:model Category
+
+
+################ Creating Products ##########
+php artisan make:migration create_products_table
+
+########### Make Model ###############
+php artisan make:model Product
+
+########### Installing intervention package for laravel #######
+composer.phar require intervention/image
+
+
+##################
+php artisan make:migration create_products_attributes_table
+
+php artisan make:model ProductsAttribute
+
+
+################## Search Google on #############
+add remove fields dynamically jquery
+
+https://www.codexworld.com/add-remove-input-fields-dynamically-using-jquery/
+
+Download free admin templates for the clients side 
+file:///C:/Users/Supersoft/Downloads/e-shopper/Eshopper/index.html
+
+php artisan make:controller IndexController
+
+// net user 
+// net user Superoft
+
+############ The Enable Category Checkbox is not coming through ###########
+doCheckbox(elem); in jquery.uniform.js on line 654 should be commented
+
+
+#################### Easy Zoom #########################
+Search for easyzoom from 
+https://i-like-robots.github.io/EasyZoom/
+
+
+array chunk is used to display items in chunks just the ways it is done in recommended products under detail.
+
+foreach($relatedProducts->chunk(3) as $chunk){
+            foreach($chunk as $item){
+                // echo $item; echo "<br>";
+            }
+
+            // echo "<br><br><br>";
+        }
+        // die;
+
+######################### Creating Cart Table ###########################
+php artisan make:migration create_cart_table
+
+######################### Jquery DatePicker ######################
+https://jqueryui.com/datepicker/
+
+
+
+#################################################
+Search for generate dummy banner online
+
+Or go to dummyimage.com
+
+Password strength
+https://www.jqueryscript.net/form/Visual-Password-Strength-Indicator-Plugin-For-jQuery-Passtrength-js.html
+
+php artisan make:middleware Frontlogin
+
+Countries List 
+https://github.com/raramuridesign/mysql-country-list/blob/master/country-lists/mysql-country-list.sql
+
+Resolving 419 Error by taking the following steps
+In frontend_design, add <meta name="csrf-token" content="{{ csrf_token() }}">
+##################################################################################################3
+
+php -S localhost:8002 -t public
+
+
+// To resolve the issue "fields does not have a default value problem", in database.php, under config just change the 'strict' => true to false; This occurs after I added additional fields in the database for regiter form under users db
+
+
+
+//////////////////////////////////// To send Email ////////////////////////
+
+You need to configure the app password after doing the 2 step verification 
+then do the configuration too under mail.php and env.php mail setup
+then write the mail function in the register under the UserController.php
+
+
+///////////////// To Resolve the SSL certificate error while tryiny to send email /////////////////////
+https://stackoverflow.com/questions/44423096/localhost-and-stream-socket-enable-crypto-ssl-operation-failed-with-code-1/47694491
+
+just add this to mail.php
+'stream' => [
+'ssl' => [
+    'allow_self_signed' => true,
+    'verify_peer' => false,
+    'verify_peer_name' => false,
+],
+],
+
+############################# Order Invoice ##########################
+search for order invoice html template
+
+https://bootsnipp.com/snippets/9gjD
+
+
+Search for pincode mysql database
+http://www.iamrohit.in/pincode-database-of-india-with-location-finder-script-in-php-and-jquery/
+
+To resolve csrf_token issue according to v120, 10m07sec, 
+go to VerifyCsrfToken.php, http/middleware/VerifyCsrfToken.php, just add the routes there
+
+Adding Social Media link 
+https://www.addthis.com/ 
+gmail: ahammedsupersoft.com.ng
+
+
+################## Video 137 is not really Clear #######################
+php artisan make:migration create_newsletter_subscribers_table
+
+
+###########Installing Export Newsletter feature v169  ###############
+add this in composer.json file
+  "maatwebsite/excel": "^2.1.0"
+
+  upgrade that "maatwebsite/excel": "^3.1.0" in composer.json file whenever you want to upgrade from 5.8 to laravel6.0
+
+  when you run into issuees
+  https://stackoverflow.com/questions/61177995/laravel-packagemanifest-php-undefined-index-name
+  
+  composer require laravel/helpers
+  
+  composer update
+
+
+##################################################################################
+php artisan make:export subscribersExport --model=NewsletterSubscriber
+
+php artisan make:export usersExport --model=Users
+
+
+##########################################################################
+composer require dompdf/dompdf
+
+The templates from html to pdf
+https://htmlpdfapi.com/blog/free_html5_invoice_templates
+
+php artisan make:migration create_wish_list_table
+
+Integrate Barcode to laravel 6
+https://github.com/milon/barcode
