@@ -40,7 +40,8 @@ class AdminController extends Controller
             $data= $request->input();
 
             // Using Admin Model from separate table 
-            echo $adminCount = Admin::where(['username' => $data['username'], 'password'=>md5($data['password']), 'status'=>1])->count();
+            // echo $adminCount = Admin::where(['username' => $data['username'], 'password'=>md5($data['password']), 'status'=>1])->count();
+            $adminCount = Admin::where(['username' => $data['username'], 'password'=>md5($data['password']), 'status'=> 1])->count();
             if($adminCount > 0){
                 Session::put('adminSession', $data['username']);
                 return redirect('/admin/dashboard');
@@ -51,7 +52,6 @@ class AdminController extends Controller
         }
         return view('admin.admin_login');
     }
-    
 
     public function dashboard(){
         // echo "test"; die;
