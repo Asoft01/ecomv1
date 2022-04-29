@@ -33,7 +33,6 @@ class APIController extends Controller
                 Mail::send('emails.confirmation', $messageData, function($message) use($email){
                     $message->to($email)->subject('Confirm your E-Com Account');
                 });
-
             }
         }
     }
